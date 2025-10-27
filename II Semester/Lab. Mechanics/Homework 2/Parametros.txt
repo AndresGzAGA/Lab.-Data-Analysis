@@ -1,0 +1,9 @@
+# Parameter file created by 'update' from current variables
+## fit f(x) "Caida.dat" using 1:2 via a,b,c
+ARGC            = 0.0                      # FIXED
+a               = 76.7586444421623         
+b               = 17.4714255402777         
+c               = -629.019897907878        
+a_err           = 0.129848039776095        # FIXED
+b_err           = 1.94557434983171         # FIXED
+c_err           = 5.9741366411798          # FIXED

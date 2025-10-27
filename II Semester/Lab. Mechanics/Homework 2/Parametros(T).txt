@@ -1,0 +1,7 @@
+# Parameter file created by 'update' from current variables
+## fit f(x) "Temperatura.dat" using 1:2 via a,b
+ARGC            = 0                        # FIXED
+a               = -10.0                 
+b               = 70.0                  
+a_err           = 0.0                      # FIXED
+b_err           = 0.0                      # FIXED
