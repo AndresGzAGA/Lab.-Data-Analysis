@@ -1,0 +1,4 @@
+Proceso	C[cm]	dC[cm]
+Inicial	14.6	0.05
+En_vinagre	17.0	0.05
+En_jarabe	12.2	0.05

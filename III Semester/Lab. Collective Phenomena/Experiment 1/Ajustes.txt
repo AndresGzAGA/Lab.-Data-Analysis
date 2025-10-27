@@ -1,0 +1,12 @@
+Experimento	k[1/s]	dk[1/s]
+4(Precipitado)	4.6x10^-4	2.1x10^-10
+4(Metal)	5.3x10^-4	1.3x10^-10
+4(Unicel)	4.6x19^-4	2.3x10^-10
+5(Sumergido_en_agua)	1.2x10^-2	4.9x10^-7
+6(Con_tapa)	5.7x10^-4	8.3x10^-9
+6(Sin_tapa)	9.8x10^-4	1.9x10^-9
+7(50ml_con_1er_dato)	9.4x10^-4	2.1x10^-10
+7(150ml_con_1er_dato)	2.6x10^-4	1.8x10^-9
+7(150ml_sin_1er_dato)	4.7x10^-4	9.1x10^-11
+7(200ml_con_1er_dato)	2.4x10^-4	1.8x10^-9
+7(200ml_sin_1er_dato)	4.4x10^-4	3.8x10^-11

@@ -1,0 +1,4 @@
+Variable	Lambda[m]	dLambda[m]	T[N]	dT[N]	Mu[kg/m]	dMu[kg/m]
+Lambda	-	-	4.1918	0.0014	1.39E-3	1.6E-5
+Tension	0.9665	2.5E-4	-	-	1.39E-3	1.6E-5
+Mu	0.9665	2.5E-4	4.1918	0.0014	-	-
