@@ -1,0 +1,2 @@
+d[m]	dm[m]	Ri[Ohm] dRi[Ohm]	Rf[Ohm]	dRf[Ohm]	Rc[Ohm]
+0.30E-3	0.025E-3	118.5	0.05	119.8	0.1	0.1

@@ -1,0 +1,114 @@
+\documentclass[12p]{article}
+\usepackage{latexsym}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{gensymb}
+\usepackage{listings}
+%\graphicspath{{Imagenes/}}
+\usepackage[export]{adjustbox}[2011/08/13]
+
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-.75in}
+\setlength{\textheight}{9.2in}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{1ex}
+
+\newcommand{\U}[1]{\,\mathrm{#1}}
+\newcommand{\cels}{\U{{}^\circ}C}
+\renewcommand{\baselinestretch}{1}\usepackage{lmodern}
+\usepackage{listings} 
+\usepackage{enumerate} 
+\usepackage{rotating}
+
+
+\title{Fenómenos de difracción en un láser diódico}
+\author
+{Gómez Arias, Andrés
+\and
+Navarrete Cruz, Erick Sebastián
+\and 
+Nellen Mondragón, Stefan Daniel
+	}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent 
+\end{abstract}
+
+\section{Introducción}
+\noindent La difracción es un fenómeno de ondas, que sucede generalmente cuando al propagarse la onda se encuentra con un obstáculo de geometría particular. Para explicar esete fenómeno de forma clásica, se tiene que aplicar el principio de Huygens. Este principio dicta que en el frente de onda, todo punto se puede considerar como una fuente puntual de ondas. Introduciendo la amplitud compleja, U, una función de argumento complejo este principio se expresa cuantitativamente de la forma:
+$$ U(\vec{x}) = -\frac{i}{\lambda} U(r_0) \int_{S} \frac {e^{iks}}{s} K(\chi)\,dS$$
+Donde $k = \frac{2 \pi}{\lambda}$ y $r_0$ representa el radio de la onda primaria (fuente puntual), en un punto donde se forma un ángulo $\chi$ con la normal al circulo y la recta que una a dicho punto con $\vec{x}$. Por último, $K(\chi) = \frac{1}{2}(1 + \cos(\chi)$.
+\par Ahora se consideran las aproximaciones debidas a Frauenhofer, que son validas para un campo lejano, es decir la distancia a una pantalla es mayor que el tamaño del obstáculo. Consideérese un obstáculo de ``tamaño'' $a$ y un observador a una distancia $L$ de la fuente de difracción. Sea $x \in \mathbb{R}$. La distancia de cualquier punto en el obstáculo al observador está dada por:
+$$d = \sqrt{L^2 + (x + \frac{a}{2})^2}$$
+si $$L >> (x + \frac{a}{2})$$ se obtiene la apoximación de Fresnel:
+$$d \approx L + \frac{x^2}{2L}+\frac{x a}{2L}+\frac{a^2}{8L}$$
+donde el último término se puede omitire si $\frac{a^2}{L} << \lambda$.
+Dadas estas bases teóricas, se pueden empezar a resolver problemas concretos.
+\par El primero de estos problemas es el de la difrección a través de una rendija simple. El principio de Bebinett indica que en el caso de una rendija simple y un obstáculo del mismo tamaño de la rendija, a largas deistancias, el patrón de interferencia es indsitinguible. Este es el caso para las aproximaciones empleadas, por lo que no se realiza un tratamienteo distinto para el cabello. Empleando las aproximaciones de Frauenhofer como limites para la integral de la amplitud compleja para la onda (que es un desarrollo bastante largo) $\Psi$, queda:
+$$ \Psi = a \Psi^{\prime} \sqrt{\frac{i}{z\lambda}} \mathrm{sinc} \left( \frac{ka\sin\theta}{2} \right) $$
+con $a$ el grosor de la rendija. Tomando el cuadrado de esto, para obtener la intensidad, queda:
+$$I(\theta) = I_0 {\left[ \operatorname{sinc} \left( \frac{\pi a}{\lambda} \sin \theta \right) \right] }^2$$
+\par Para un sistema de $n$ rendijas se considera la expresión
+$$\Psi = \int_{D_i} \frac{i}{r\lambda} \Psi^\prime e^{-ikr}\,d\mathrm{D_i}$$
+siendo D la rendija y $r$ la aproximación de Fresnel para dicha rendija. Por la linealidad de las ondasla contribución de cada una de ellas es aditiva. Queda:
+$$\Psi = \sum_{i=0}^{n-1}\Psi_i$$
+Después de integral y cuadrar $\Psi$ resulta que en el caso con $n = 2$
+$$I(\theta) = \cos^2 \left [{\frac {\pi d \sin \theta}{\lambda}}\right]~\mathrm{sinc}^2 \left [ \frac {\pi a \sin \theta}{\lambda} \right]$$
+con $a$ el grosor de las rendijas y $d$ la distancia entre estas.
+\par El caso mas sencillo es el de el semiplano, pues el límite superior de la integral es $\inty$ y el inferior la aproximacion de Fresnel, quedando así:
+
+ 
+\section{Materiales}
+
+\section{Procedimiento}
+
+\section{Datos experimentales}
+
+\section{Resultados}
+
+\section{Discucsión}
+
+\section{Conclusión}
+\noindent 
+
+
+\begin{thebibliography}{9}
+
+\bibitem{Física} 
+Griffins, David J. (1999).
+\textit{Introduction to Electrodynamics}. 
+  (3rd ed., pp. 364-386). Prentice-Hall.
+
+
+\bibitem{Física} 
+PHYWE Systeme GmbH
+\textit{http://www.phywe-es.com/index.php/fuseaction/download/lrn$\_$file/versuchsanleitungen/P2460201/e/p2460201e.pdf}. 
+www.phywe.com
+
+
+\end{thebibliography}
+%\begin{thebibliography}{9}
+%\bibitem{Física} 
+%National Instruments Corporation
+%\textit{www.nu.com/es-mx/shop/labview.html}. 
+%11500 Mopac Expwy, Austin TX
+%\end{thebibliography}
+ 
+
+
+
+\end{document}
+%  LocalWords:  KdV

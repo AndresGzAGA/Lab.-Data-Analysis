@@ -1,0 +1,6 @@
+Luz	R[Ohm]	dR[Ohm]
+Obscuridad	inf	Nan
+Bajo_la_mesa	3.72E6	0.005E6
+Ambiente	18.79E3	0.005E3
+Laser	606	0.5
+Linterna_Celular	90.1	0.05
