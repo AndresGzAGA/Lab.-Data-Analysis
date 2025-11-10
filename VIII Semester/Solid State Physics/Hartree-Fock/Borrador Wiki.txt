@@ -1,0 +1,38 @@
+Nótese que hasta ahora no se determinaron los números atómicos efectivos \( \eta_1 \) y \( \eta_2\), y ésto permite tener
+una energía como función de ambos parámetros: \( E = E( \eta_1, \eta_2) \), lo cual nos permite minimizarla aún más. Si se
+hace una gráfica de \( E( \eta_1, \eta_2) \):
+
+
+Ésta es simétrica con respecto a la recta \( \eta_1 = \eta_2 \), como es de esperarse. Para justamente esta recta el programa
+arroja nans, lo cual viene de que ahí la base de dos vectores es linealmente dependiente, lo cual hace que la matriz de traslape
+sea no invertible. Sin embargo, en la gráfica se puede ver que ésta discontinuidad es removible, en teoría se podría hacer
+una continuación analítica a la energía aún para ese caso. Se tiene también una recta de mínimos aproximadamente constante, 
+en la cual la ordenada de uno de los números atómicos es del orden de \( 1.58 \), y la energía mínima en ésta es de \( -77.61 eV \),
+que es comparable con el valor \( 27/16 = 1.68 \) obtenido mediante el método variacional. El punto de dicha curva de mínimos 
+que tiene más sentido físico es en el cual ambos números atómicos son iguales: \( \eta_1 = 1.58 = \eta_2 \), para el cual se
+toma como continuación analítica la energía mínima obtenida: \( -77.61 eV \)
+
+Ésto concluye la Pregunta 2. La mejora en el valor de la energía no es tan considerable con respecto a la Pregunta 1, pese
+a que los cálculos fueron más complicados. En teoría se podría mejorar la aproximación tomandose una expansión en gaussianas
+más grande que 3, que se ajuste mejor a los estados \( 1s \).
+
+
+Eliminado:
+En el caso particular de dos electrones (dos ecuaciones de una partícula y dos funciones de prueba), el potencial de intercambio que aparece por la antisimetrización:
+
+\( V_i^X(\vec{r}) =\int\frac{\psi_j^*(\vec{r'},\sigma')\psi_i(\vec{r'},\sigma')}{\vert \vec{r}-\vec{r'}\vert}d^3rd\sigma\)
+
+si tomamos las primeras funciones de prueba como \( \psi_1(\vec{r},\sigma)=\xi_{1s}(\vec{r})\alpha(\sigma),\psi_2(\vec{r},\sigma)=\xi_{1s}(\vec{r})\beta(\sigma) \), con \( \alpha \) y \(\beta\) las funciones propias del operador \(S_z\) con eigenvalores \(\hbar/2\) y \(-\hbar/2\) respectivamente, entonces tenemos que el potencial de intercambio es factor de \(\langle\alpha\vert\beta\rangle=0\) y la ecuación de Hartree Fock se simplifica en la ecuación de Hartree.
+El potencial de Hartree, por otra parte, es múltiplo de\ (\langle\alpha\vert\alpha\rangle=1\). Calculamos \(V_1^H\) con \(Z=8 \) y usando unidades atómicas:
+
+\( V_1^H=\int\frac{\xi_{1s}(\vec{r}')^2}{\vert\vec{r}-\vec{r'}\vert}d^3r'=\int\left(\frac{2^{3/2}}{\sqrt{\pi}}\right)^2\exp(-2r')^2\frac{1}{\vert\vec{r}-\vec{r'}\vert}d^3r' \)
+
+Usando la expansión de \( \frac{1}{\vert\vec{r}-\vec{r}'\vert} \) en armónicos esféricos tenemos
+
+\( V_1^H(\vec{r})=\frac{8}{\pi}\int\exp(-4r')\sum_{l=0}^\infty\frac{4\pi}{2l+1}\frac{r_-^l}{r_+^{l+1}} \sum_{m=-l}^lY_{lm}^*(\theta,\varphi)Y_{lm}(\theta',\varphi')d^3r' \)
+\( =32\int\exp(-4r')r'^2dr\frac{r_-^0}{r_+^1}2\sqrt{\pi}Y_{00}(\theta,\varphi) \)
+\( =32\left(\int_0^r\exp(-4r')\frac{r'^2}{r}dr'+\int_r^\infty\exp(-4r')r'dr'\right) \)
+\( =32\left(-\frac{\exp(-4r')(2+8r'+16r'^2)}{64r'}\vert_0^r+\frac{\exp(-4r')(1+4r')}{32}\vert_r^\infty\right) \)
+\( =-\frac{\exp(-4r)(1+2r)-1}{r} \)
+
+
