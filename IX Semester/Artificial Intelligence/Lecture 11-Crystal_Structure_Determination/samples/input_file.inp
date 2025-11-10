@@ -1,0 +1,82 @@
+iters 0
+
+num_runs 15
+
+'Varying average crystallite size 200, 400, 600, 800 y 1000 nm
+'Varying specimen displacement -0.01. 0.0, 0.01
+File_Variables(aver_size_0, 200, 1000, 200, sp_d, -0.01, 0.01, 0.01)
+
+yobs_eqn = 1;
+   min 2.0
+   max 135.0
+   del 0.01
+
+Out_X_Ycalc( 1001377-##Run_Number##.xy)
+
+bkg 0 0 0 0
+
+prm !spec_disp = #out sp_d ;
+
+Specimen_Displacement (spec_disp)
+
+str
+scale 0.01
+phase_name Ba2Y1Cu2.98O6.92
+space_group P4/mmm
+a 3.863000
+b 3.863000
+c 11.626000
+al 90.000000
+be 90.000000
+ga 90.000000
+site Ba x 0.5 y 0.5 z 0.1861 occ Ba 1 beq 0.5
+site Y x 0.5 y 0.5 z 0.5 occ Y 1 beq 0.5
+site Cu x 0 y 0 z 0.3574 occ Cu 1 beq 0.5
+site Cu x 0 y 0 z 0 occ Cu 0.980 beq 0.5
+site O x 0.5 y 0 z 0.3782 occ O 1 beq 0.5
+site O x 0 y 0.5 z 0 occ O 0.500 beq 0.5
+site O x 0 y 0 z 0.1573 occ O 0.960 beq 0.5
+
+prm !aver_size  = #out aver_size_0 ;
+
+lor_fwhm = 0.1 57.295779 * Lam /(Cos(Th)*aver_size) ;  'in nanometers
+
+ prm  !strain 0.0001
+      gauss_fwhm = strain Tan(Th) ;
+
+lam
+ymin_on_ymax 0.00001
+        la  0.579  lo  1.5405902 lh  0.4374157
+        la  0.080  lo  1.5410632 lh  0.6432140
+        la  0.236  lo  1.5443983 lh  0.5128764
+        la  0.105  lo  1.5446848 lh  0.6872322
+        la  0.0016 lo  1.3922   lh  0.55
+
+        Radius(217.5)
+
+LP_Factor(!th2_monochromator, 0)
+
+Full_Axial_Model(12, 15, 16, 2.55, 3.10)
+
+/*
+filament_length               12
+sample_length                 15
+receiving_slit_length         16   'this is the detector slit
+primary_soller_angle       2.55
+    secondary_soller_angle   3.10
+
+ Divergence(, 0.5)
+    Slit_Width(, 0.075)         'This is the detector slit
+*/
+
+prm !b1  0.00381
+prm !c1  -0.9278
+prm !d1  1.94324
+prm !e1  0.00007
+
+  stacked_hats_conv
+  whole_hat  = b1 57.2957795130823 / Rs;
+  half_hat   = c1 57.2957795130823 / Rs ;
+  hat_height = e1 ;
+  half_hat   = d1 57.2957795130823 / Rs ;
+  hat_height = e1 ;
